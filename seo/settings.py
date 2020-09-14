@@ -46,9 +46,6 @@ INSTALLED_APPS +=[                  #for allauth
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'allauth.socialaccount.providers.naver',
-    'allauth.socialaccount.providers.kakao',
-    'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.google',
 ]
 MIDDLEWARE = [
@@ -135,15 +132,16 @@ USE_TZ = True
 
 SITE_ID = 1     #for allauth
 
+LOGIN_REDIRECT_URL = '/'  #for allauth
+
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
-        # For each OAuth based provider, either add a ``SocialApp``
-        # (``socialaccount`` app) containing the required client
-        # credentials, or list them here:
-        'APP': {
-            'client_id': '123',
-            'secret': '456',
-            'key': ''
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
         }
     }
 }

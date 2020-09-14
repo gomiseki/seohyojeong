@@ -1,3 +1,4 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Signup</title>
-    <link href='css/styles.css' rel='stylesheet'>
-</head>
+    <link href="{%static 'css/styles.css'%}" rel='stylesheet'>
 <style>
     body {
         font-family: 'GmarketSansLight';
@@ -16,7 +16,7 @@
 </style>
 <body>
     <div id='left-image'>
-        <img src='images/sky1.jpg'>
+        <img src="{%static 'images/sky1.jpg'%}">
     </div>
     <div id='right'>
         <div id='right-title'>
@@ -59,18 +59,18 @@
         <p><img src="https://steemitimages.com/1280x0/https://i.imgsafe.org/f3/f3caaad7f3.png" width="350" height="12" alt=''></p>
         <div id='grid1'>
             <a href='#' id='facebook'>
-                <div id='images'><img src='images/facebook.png' width='15px'></div>
+                <div id='images'><img src="{%static 'images/facebook.png'%}" width='15px'></div>
                 Facebook</a>
             <a href='#' id='twitter'>
-                <div id='images'><img src='images/twitter.png' width='15px'></div>
+                <div id='images'><img src="{%static 'images/twitter.png'%}" width='15px'></div>
                 Twitter</a>
         </div>
         <div id='grid2'>
             <a href='#' id='google'>
-                <div id='images'><img src='images/google.png' width='15px'></div>
+                <div id='images'><img src="{%static 'images/google.png'%}" width='15px'></div>
                 Google</a>
             <a href='#' id='kakao'>
-                <div id='images'><img src='images/kakao.png' width='20px'></div>
+                <div id='images'><img src="{%static 'images/kakao.png'%}" width='20px'></div>
                 Kakao</a>
         </div>
         </div>
